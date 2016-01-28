@@ -7,7 +7,7 @@ import{SearchResultComponent} from './search-result.component';
   selector:'search-route',
   templateUrl:'app/search-route.html',
   providers:[SearchRouteService],
-  directives: [SearchResultComponent]
+  directives: [SearchResultComponent ]
 })
 
 export class SearchRouteComponent{
@@ -19,7 +19,6 @@ export class SearchRouteComponent{
   }
 
   searchRoute(searchPhrase:string){
-    this.service.getSearchResult(searchPhrase).then(routes => this.searchResult = routes)
-    console.log("searching");
+    this.service.getSearchResult(searchPhrase).subscribe(routes => this.searchResult = routes)
   }
 }
