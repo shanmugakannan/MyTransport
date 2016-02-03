@@ -2,12 +2,13 @@ import {Component} from 'angular2/core';
 import {SearchRouteService} from './search-route-service';
 import{SearchResult} from './search-result';
 import{SearchResultComponent} from './search-result.component';
+import {SelectedStyleDirective} from './selected-style';
 
 @Component({
   selector:'search-route',
   templateUrl:'app/search-route.html',
   providers:[SearchRouteService],
-  directives: [SearchResultComponent ]
+  directives: [SearchResultComponent]
 })
 
 export class SearchRouteComponent{

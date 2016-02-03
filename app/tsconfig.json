@@ -28,7 +28,8 @@
         "search-result.component.ts",
         "search-result.ts",
         "search-route-service.ts",
-        "search-route.component.ts"
+        "search-route.component.ts",
+        "selected-style.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

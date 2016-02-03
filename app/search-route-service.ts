@@ -12,7 +12,7 @@ export class SearchRouteService{
   {
     //return Promise.resolve(SearchResultData);
     // return an observable
-    return this.http.get('http://localhost:8080')
+    return this.http.get('http://localhost:8080/routes/' + searchPhrase)
     .map( (responseData) => {
       return responseData.json();
     })
@@ -21,8 +21,8 @@ export class SearchRouteService{
       if (tasks) {
         tasks.forEach((routeResult) => {
           result.push(
-                     new SearchResult(routeResult.id,
-                              routeResult.route,
+                     new SearchResult(routeResult.routeId,
+                              routeResult.name,
                               routeResult.match));
         });
       }

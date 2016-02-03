@@ -1,20 +1,23 @@
-// modules =================================================
+// modules ========================================================
 var express        = require('express');
 var app            = express();
+var mongoose 	   = require('mongoose');
 
-// set port
+// server configuration ===========================================
+var db = require('./config/transport.server.db');
+
+// server port
 var port = process.env.PORT || 8080;
 
-// set the static files location
-app.use(express.static(__dirname + '/api/src'));
-
-// routes ==================================================
-var route = require('./routes');
+// server routes ==================================================
+var route = require('./routes/transport.server.routes');
 route(app);
 
-// start app ===============================================
+// start server ===================================================
 var server = app.listen(port);
 
+//connect MongoDB 
+mongoose.connect(db.url);
 
-// Console.log
-console.log('MyApp Runs on  ' + port);
+// Log ============================================================
+console.log('MyTransport Runs on  ' + port);

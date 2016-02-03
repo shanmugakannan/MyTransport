@@ -1,0 +1,22 @@
+var routes =
+    [
+       {
+        routeId:1,
+		name:"Porur",
+        startTime:ISODate("1900-01-01T23:06:00.000Z"),
+		routePoints:[1,2,3,4,5,6,7,8,9],
+		durationMins:[0,3,6,15,26,5,6,4,7]
+      },
+	  {
+        routeId:2,
+		name:"Guindy",
+        startTime:ISODate("1900-01-01T23:06:00.000Z"),
+		routePoints:[1,2,3,4,5,6,7,8,9],
+		durationMins:[0,3,6,15,26,5,6,4,7]
+      }
+    ];
+	
+	
+	
+db.routeData.insert(routes)
+ 
