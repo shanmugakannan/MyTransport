@@ -24,12 +24,12 @@
     "buildOnSave": false,
     "files": [
         "boot.ts",
-        "route-detail.component.ts",
-        "search-result.component.ts",
-        "search-result.ts",
-        "search-route-service.ts",
-        "search-route.component.ts",
-        "selected-style.ts"
+        "components/route-detail.component.ts",
+        "components/search-result.component.ts",
+        "components/search-route.component.ts",
+        "directives/selected-style.ts",
+        "services/search-route-service.ts",
+        "types/search-result.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

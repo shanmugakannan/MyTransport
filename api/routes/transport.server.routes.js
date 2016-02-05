@@ -16,8 +16,10 @@ app.get('/routes',function(req,res){
 
 app.get('/routes/:routeName', function (req, res) {
     if (req.params.routeName) {
-        TransportRoutesModel.find({ name: req.params.routeName }, function (err, searchResult) {
-            res.json(searchResult);
+        TransportRoutesModel.find({ name: {$regex: new RegExp('^' + req.params.routeName.toLowerCase(), 'i')} }, function (err, searchResult) {
+					if (err)
+						res.send('error');
+          res.json(searchResult);
         });
     }
 });

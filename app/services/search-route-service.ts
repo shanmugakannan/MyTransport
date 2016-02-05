@@ -1,6 +1,6 @@
 import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
-import {SearchResult} from './search-result';
+import {SearchResult} from '../types/search-result';
 import 'rxjs/add/operator/map'
 
 @Injectable()
